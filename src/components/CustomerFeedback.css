@@ -1,0 +1,90 @@
+.feedback-section {
+  padding: 60px 15px;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 !important;
+}
+
+.feedback-heading {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.feedback-subheading {
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 50px;
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Force 5 columns per row */
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+  align-items: center;
+  justify-items: center;
+  color: #555 !important;
+
+}
+
+.brand-item {
+  text-align: center;
+  width: 100%;
+  color: #555 !important;
+
+}
+
+.brand-logo {
+  max-width: 250px;
+  height: auto;
+  max-height: 90px;
+  object-fit: contain;
+  filter: grayscale(0%); /* change to 100% for grayscale effect */
+  transition: filter 0.3s;
+  color: #555 !important;
+}
+
+.brand-logo:hover {
+  filter: grayscale(0%);
+}
+
+/* Responsive: on tablets, switch to 3 or 2 columns */
+@media (max-width: 768px) {
+  .feedback-section {
+    padding: 40px 15px;
+  }
+  .feedback-heading {
+    font-size: 35px;
+  }
+  .feedback-subheading {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  .brands-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brands-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .brand-logo {
+    max-height: 50px;
+  }
+}

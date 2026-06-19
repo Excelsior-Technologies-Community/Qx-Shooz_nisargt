@@ -1,0 +1,197 @@
+.footer {
+  background-color: #f8f8f8;
+  padding: 50px 15px 20px;
+  font-family: inherit;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 160px;
+  color: black !important;
+}
+
+.footer-heading {
+  font-size: 17px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+  text-align: center;
+  color: black !important;
+  font-weight: 500;
+}
+
+.footer-links li:hover {
+  text-decoration: underline #ae3f4f;
+}
+.footer-bottom a{
+  color: #ae3f4f !important;
+  text-decoration: none;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ae3f4f;
+}
+.logo{
+  position: relative;
+  left: 30px;
+}
+
+.contact-info li {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.contact-info li:hover {
+  color: #ae3f4f !important;
+  text-decoration: underline;
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  color: #777;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .footer-column {
+    text-align: center;
+  }
+  .footer-heading {
+    margin-bottom: 15px;
+  }
+  .footer-links li {
+    margin-bottom: 8px;
+  }
+  .logo{
+    position: relative;
+    left: 40%;
+  }
+}
+/* ========== ACCORDION (mobile only: 426px and below) ========== */
+@media (max-width: 426px) {
+  /* Each column becomes a block with border-bottom */
+  .footer-column {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+
+  /* Heading becomes clickable toggle */
+  .footer-heading.accordion-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 0;
+    padding: 12px 0;
+    font-size: 16px;
+    user-select: none;
+  }
+
+  .footer-heading.accordion-toggle:hover {
+    color: #ae3f4f;
+  }
+
+  /* Plus/minus icon */
+  .toggle-icon {
+    font-size: 20px;
+    font-weight: 300;
+    color: #222;
+    transition: transform 0.3s;
+  }
+
+  .footer-column.open .toggle-icon {
+    color: #ae3f4f;
+  }
+
+  /* Hide the content by default */
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 0;
+    margin: 0;
+  }
+
+  /* When open, show content with max-height */
+  .footer-column.open .accordion-content {
+    max-height: 500px; /* adjust as needed */
+    padding: 10px 0 15px;
+  }
+
+  /* For the SHOZ logo column */
+  .logo-img {
+    height: 30px;
+    width: auto;
+  }
+
+  /* Adjust contact info style */
+  .contact-info li {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+/* ========== Keep desktop (above 426px) unchanged ========== */
+@media (min-width: 427px) {
+  .toggle-icon {
+    display: none; /* hide plus/minus on desktop */
+  }
+
+  .accordion-content {
+    max-height: none !important;
+    overflow: visible !important;
+    padding: 0 !important;
+  }
+
+  .footer-heading.accordion-toggle {
+    cursor: default;
+    pointer-events: none;
+  }
+
+  .footer-heading.accordion-toggle:hover {
+    color: inherit;
+  }
+}
